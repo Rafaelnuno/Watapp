@@ -6,6 +6,7 @@
 |  20190878  | Tiago Silva |
 ## Enquadramento
   A água doce é essencial para a vida, mas a maioria das pessoas no mundo desenvolvido não pensa na importância que a água é para as nossas vidas . Nos países em desenvolvimento, no entanto, a busca por água potável pode ser uma crise diária. Milhões de pessoas morrem a cada ano, a maioria delas crianças, de doenças evitáveis causadas pela falta de acesso a água potável.
+  
   O objetivo da Watapp será expor notícias a nível global sobre as dificuldades e soluções para este problema, tendo como prioridade dar a oportunidade de os leitores poderem comunicar entre si e os moderadores à cerca de qualquer artigo disponível na aplicação, podendo dar assim uma perspetiva às pessoas que os hábitos diários que temos com este recurso natural tão importante nas nossas vidas poderá estar em perigo e assim começarmos a pensar e a mudar a nossa mentalidade. Os utilizadores poderão também contribuir com informação que achem importante à cerca do tema e enviar-nos artigos, notícias, etc para os moderadores.
   Este projeto está inserido no desenvolvimento sustentável nomeadamente produção e consumo sustentáveis das Nações Unidas relativamente ao segundo tópico "alcançar a gestão sustentável e o uso eficiente dos recursos naturais" esperando assim poder contribuir para esta causa.
 
