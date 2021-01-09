@@ -31,7 +31,7 @@ public class News {
 
      @ManyToOne
      @JoinColumn(name ="Not_user_id")
-     @JsonIgnoreProperties({"id","email","posts"})
+     @JsonIgnoreProperties({"id","email"})
      private User user;
     
 

@@ -28,8 +28,6 @@ public class User {
     @Column(name = "Use_email")
     protected String email;
 
-    @Column(name = "Use_post")
-    protected int posts;
 
     @OneToMany
     @JoinColumn(name = "id_u")
@@ -39,6 +37,11 @@ public class User {
         @JoinColumn(name = "Use_tipo_id")
         @JsonIgnoreProperties({"id"})
         private Tipo tipo;
+
+        public User(){
+        }
+
+
 
     public User(int id) {
         this.id = id;
@@ -55,10 +58,6 @@ public class User {
 
     public int getId()  {
         return id;
-    }
-
-    public int getPosts() {
-        return posts;
     }
 
     public Tipo getTipo() {
