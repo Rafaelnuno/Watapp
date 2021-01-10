@@ -35,11 +35,11 @@ public class News {
      private User user;
     
 
-     //@OneToMany
-    // @JoinColumn(name = "Estn_id_n")
-   //  private Historic historic;
-
-        public News(){
+     /*@OneToMany
+     @JoinColumn(name = "Estn_id_n")
+     private Historic historic;
+     */
+        public News(){  
     }
 
 
