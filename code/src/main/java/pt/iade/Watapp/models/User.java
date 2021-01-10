@@ -36,7 +36,7 @@ public class User {
     @ManyToOne
         @JoinColumn(name = "Use_tipo_id")
         @JsonIgnoreProperties({"id"})
-        private Tipo tipo;
+        private Type type;
 
         public User(){
         }
@@ -60,8 +60,8 @@ public class User {
         return id;
     }
 
-    public Tipo getTipo() {
-        return tipo;
+    public Type getType() {
+        return type;
     }
  
     

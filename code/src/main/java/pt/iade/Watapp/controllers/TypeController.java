@@ -11,34 +11,34 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import pt.iade.Watapp.models.Tipo;
+import pt.iade.Watapp.models.Type;
 import pt.iade.Watapp.models.Exceptions.NotFoundException;
-import pt.iade.Watapp.repositories.TipoRepository;
+import pt.iade.Watapp.repositories.TypeRepository;
 
 @RestController
 @RequestMapping(path="/api/tipos")
 
-public class TipoController {
+public class TypeController {
     
-    private Logger logger = LoggerFactory.getLogger(TipoController.class);
+    private Logger logger = LoggerFactory.getLogger(TypeController.class);
     @Autowired
-    private TipoRepository tipoRepository;
+    private TypeRepository typeRepository;
 
     @GetMapping(path = "", produces = MediaType.APPLICATION_JSON_VALUE)
-    public Iterable<Tipo> getTipo() {
-        logger.info("Sending all users");
-            return tipoRepository.findAll();
+    public Iterable<Type> getTipo() {
+        logger.info("Sending all types");
+            return typeRepository.findAll();
 }
 
 
 @GetMapping(path = "/{id}",produces= MediaType.APPLICATION_JSON_VALUE)
-    public Tipo getTipo(@PathVariable int id) {
+    public Type getTipo(@PathVariable int id) {
             logger.info("Sending the moderator with id "+id);
-        Optional<Tipo> _tipo=tipoRepository.findById(id);
-            if (_tipo.isEmpty()) throw
+        Optional<Type> _type=typeRepository.findById(id);
+            if (_type.isEmpty()) throw
                 new NotFoundException(""+id,"Tipo","id");
             else 
-                return _tipo.get() ;
+                return _type.get() ;
         }
 
 }

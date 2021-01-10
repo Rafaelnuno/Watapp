@@ -13,29 +13,29 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "Tipos")
-    public class Tipo{
+    public class Type{
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
         @Column(name = "Id_t")
-        protected int id;
+        private int id;
     
         @Column(name="Tip_nome")
-        private String tipo;
+        private String type_name;
 
         @OneToMany
         @JoinColumn(name = "id_u")
         private List<User> users;
 
-        public Tipo(){
+        public Type(){
         }
 
-        public Tipo(int id) {
+        public Type(int id) {
             this.id = id;
         }
 
-        public String getTipo() {
-            return tipo;
+        public String getType_name() {
+            return type_name;
         }
-
+    
 }
 
