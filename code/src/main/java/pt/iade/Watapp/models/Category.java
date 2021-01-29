@@ -11,31 +11,31 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+
 @Entity
-@Table(name = "Tipos")
-public class Type{
+@Table(name = "categoria")
+public class Category {
+    
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "Id_t")
-    private int id;
-    
-    @Column(name="Tip_nome")
-    private String type_name;
+    @Column(name = "id_c")
+     private int id;
 
-    @OneToMany
-    @JoinColumn(name = "Use_tipo_id")
-    private List<User> users;
+    @Column(name = "Tip_categ")
+     private String category;
 
-    public Type(){
-    }
+     @OneToMany
+     @JoinColumn(name = "Not_categ_id")
+     private List<News> news;
+     
+     
+     public String getCategory() {
+         return category;
+     }
 
-    public Type(int id) {
-         this.id = id;
-    }
+     public int getId() {
+         return id;
+     }
 
-    public String getType_name() {
-        return type_name;
-    }
-    
+
 }
-

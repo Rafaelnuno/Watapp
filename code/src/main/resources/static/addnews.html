@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> JS </title>
+        <link rel="stylesheet" href="stylesheets/style.css">
+        <link rel="stylesheet" href="stylesheets/News.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="./javascripts/Addnews.js"></script>
+    </head>
+    <body>
+        <header> Adicionar uma Notícia  </header>       
+        
+        
+        <nav>
+
+            <ul>
+                <li><a href="index.html">Voltar às notícias</a></li>
+            </ul>
+
+        </nav>
+        
+        <main >
+
+            <h2>Título: <input placeholder="Título" type="text" id="not_titulo"  ></h2>
+            <h5>Notícia:</h5><textarea placeholder="Notícia"  id="not_texto" ></textarea>
+            <h2>Utilizador: <select id="utilizadores">
+                <option value="1">Pedro Costa</option>
+                <option value="2">Inês Pereira</option>
+                <option value="3">Daniela Almeida</option>
+                <option value="4">João Ribeiro</option>
+                <option value="5">Bruno Sousa</option>
+                <option value="6">Diogo Ramos</option>
+           </select></h2>
+           <h2>Categorias: <select id="categorias">
+            <option value="1">Poluição</option>
+            <option value="2">Consumo</option>
+       </select></h2>
+           
+
+            <h2><input type="button" value="Adicionar" 
+                onclick="addNews()"></h2>
+        </main>
+        <footer> FOOTER </footer>
+    </body>
+    </html>

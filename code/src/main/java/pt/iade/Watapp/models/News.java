@@ -1,5 +1,7 @@
 package pt.iade.Watapp.models;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -7,7 +9,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-//import javax.persistence.OneToMany;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 
@@ -28,18 +30,21 @@ public class News {
     @Column(name = "not_texto" )
     private String text;
    
+    @Column(name = "not_titulo")
+    private String title;
 
-     @ManyToOne
-     @JoinColumn(name ="Not_user_id")
-     @JsonIgnoreProperties({"id","email"})
-     private User user;
-    
-
-     /*@OneToMany
+     @OneToMany
      @JoinColumn(name = "Estn_id_n")
-     private Historic historic;
-     */
-        public News(){  
+     @JsonIgnoreProperties({"id"})
+     private List<Historic> historic;
+     
+     @ManyToOne
+     @JoinColumn(name ="Not_categ_id")
+     //@JsonIgnoreProperties({"id"})
+     private Category category;
+
+
+    public News(){  
     }
 
 
@@ -51,10 +56,20 @@ public class News {
         return number;
     }
 
-    public User getUser() {
-        return user;
+    public List<Historic> getHistoric() {
+        return historic;
     }
 
+    public String getTitle() {
+        return title;
+    }
 
- 
+    public Category getCategory() {
+        return category;
+    }
+
+    public int getId() {
+        return id;
+    }
+
 }

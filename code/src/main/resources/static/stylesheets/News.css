@@ -1,0 +1,38 @@
+main { 
+    background-color: orange; 
+    display: block;
+    text-align: start;
+}
+
+main > section {
+    background-color: orange; 
+    width: auto;
+    display: flex; 
+    flex-wrap: wrap;
+
+}
+
+ main > section > p {
+    background-color: blue;
+    width: 30%;
+    padding: 5px;
+    margin: 5px;
+}
+
+#cover {
+    height: 200px;
+    margin:auto;
+}
+
+
+textarea{
+    width: 50%;
+    min-height: 150px;
+    max-height: 150px;
+    resize: none;
+    padding: 12px;
+    background-color: white;
+    border: none;
+    color: black;
+    margin-top: -50px;
+}

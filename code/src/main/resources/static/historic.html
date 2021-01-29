@@ -1,0 +1,57 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>WatApp</title>
+    <link rel="stylesheet" href="stylesheets/Style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="javascripts/historic.js"></script>
+</head>
+
+<body>
+    <header> Histórico das Notícias em Análise </header>
+
+    <nav>
+
+        <ul>
+            <li><a href="index.html">Voltar às Notícias</a></li>
+        </ul>
+
+    </nav>
+<br>
+    <section>
+        <h6> Todas as Notícias: <input type="button" value="Clicar" onclick="loadNews()"></h6>
+        <br>
+        <h6> Utilizadores:
+        <select id="utilizadores">
+            <option value="1">Pedro Costa</option>
+            <option value="2">Inês Pereira</option>
+            <option value="3">Daniela Almeida</option>
+            <option value="4">João Ribeiro</option>
+            <option value="5">Bruno Sousa</option>
+            <option value="6">Diogo Ramos</option>
+       </select>
+       <input type="button" value="Filtrar" onclick="filterUsers()"></h6>
+
+    </section>
+<br>
+       <h6> Categorias:
+        <select id="categorias">
+            <option value="1">Poluição</option>
+            <option value="2">Consumo</option>
+       </select>
+       <input type="button" value="Filtrar" onclick="filterCategory()"></h6>
+
+    </section>
+
+
+
+
+
+    <main id="main"></main>
+   
+
+    <footer> FOOTER </footer>
+</body>
+
+</html>

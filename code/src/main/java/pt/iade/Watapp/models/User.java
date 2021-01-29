@@ -15,7 +15,7 @@ import javax.persistence.Table;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
-@Table(name = "users")
+@Table(name = "utilizador")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -28,18 +28,17 @@ public class User {
     @Column(name = "Use_email")
     protected String email;
 
-
     @OneToMany
-    @JoinColumn(name = "id_u")
-    private List<News> news;
+    @JoinColumn(name = "Estn_id_u")
+    private List<Historic> historic;
 
     @ManyToOne
-        @JoinColumn(name = "Use_tipo_id")
-        @JsonIgnoreProperties({"id"})
-        private Type type;
+    @JoinColumn(name = "Use_tipo_id")
+    @JsonIgnoreProperties({"id"})
+    private Type type;
 
-        public User(){
-        }
+    public User(){
+    }
 
 
 

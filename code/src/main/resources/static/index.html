@@ -1,0 +1,36 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>WatApp</title>
+    <link rel="stylesheet" href="stylesheets/Style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="javascripts/Listanews.js"></script>
+</head>
+
+<body>
+
+    <header> Lista de Notícias </header>
+
+    <nav>
+       
+    <ul>
+        <li> <a href="historic.html" >Ver Histórico do Moderador</a></li>
+        <li> <a href="historicuser.html" >Ver Histórico do Utilizador</a></li>
+         <li><a href="addnews.html">Adicionar uma Notícia</a></li>
+    </ul>
+    </nav>
+<br>
+    <section>
+       <h4> Notícia: <input type="text" id="not_texto">
+        <input type="button" value="Filtrar" onclick="filterText()"></h4>
+    </section>
+<br>
+    
+    <main id="main"></main>
+   
+
+    <footer> FOOTER </footer>
+</body>
+
+</html>

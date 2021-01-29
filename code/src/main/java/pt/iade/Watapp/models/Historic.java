@@ -1,4 +1,4 @@
-/*package pt.iade.Watapp.models;
+package pt.iade.Watapp.models;
 
 import java.time.LocalDate;
 
@@ -10,6 +10,10 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+
 
 @Entity
 @Table(name = "estadonoticia")
@@ -24,13 +28,20 @@ public class Historic {
 
 
     @ManyToOne
-    @JoinColumn(name = "Id_n")
+    @JoinColumn(name = "Estn_id_n")
      private News news;
 
 
     @ManyToOne
-    @JoinColumn(name = "Id_e")
-     private Estado estado;
+    @JoinColumn(name = "Estn_id_e")
+    @JsonIgnoreProperties({"id"})
+     private State state;
+
+     @ManyToOne
+     @JoinColumn(name = "Estn_id_u")
+     @JsonIgnoreProperties({"id"})
+      private User user;
+     
 
 
     public Historic(){
@@ -42,7 +53,12 @@ public class Historic {
         return data;
     }
 
+    public State getState() {
+        return state;
+    }
 
+    public User getUser() {
+        return user;
+    }
 
-
-}*/
+}

@@ -1,0 +1,41 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>WatApp</title>
+    <link rel="stylesheet" href="stylesheets/Style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="javascripts/Historicuser.js"></script>
+</head>
+
+<body>
+    <header> Histórico da Inês</header>
+
+    <nav>
+
+        <ul>
+            <li><a href="index.html">Voltar às Notícias</a></li>
+        </ul>
+
+    </nav>
+<br>
+    <section>
+        <h6> Todas as Notícias: <input type="button" value="Clicar" onclick="loadNews()"></h6>
+        <br>
+        <h6> Estado:
+            <select id="estados">
+                <option value="1">Enviado</option>
+                <option value="2">Aceite</option>
+                <option value="3">Rejeitado</option>
+            </select>
+                <input type="button" value="Filtrar" onclick="filterState()"></h6>
+    </section>
+
+
+        <main id="main"></main>
+   
+
+        <footer> FOOTER </footer>
+    </body>
+    
+    </html>
