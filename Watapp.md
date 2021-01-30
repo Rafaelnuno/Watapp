@@ -37,7 +37,7 @@ NA.
 
 **Passo a passo:**
 1. O utilizador carrega na opção de adicionar uma notícia
-2. Aparece um formulário para ser preenchido
+2. Aparece um formulário para ser preenchido \
 2.1. Título da notícia
 2.2. Texto da notícia
 2.3. Categoria da notícia
