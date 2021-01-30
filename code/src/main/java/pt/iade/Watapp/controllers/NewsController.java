@@ -64,7 +64,7 @@ public class NewsController {
                     else 
                     return _news.get();
     }
-                //mostra mais detalhe sobre uma noticia em especifico dai o id pois e o da noticia em que clicamos
+                //mostra mais detalhe sobre uma noticia em especifico
                 //(esta a ser usadas no js onde tem detail)
 
 
@@ -77,4 +77,13 @@ public class NewsController {
                 //(escolher o estado enviado,aceite ou rejeitado) 
                 //usado no historicuser.js na filtragem dos estados)
 
+        @GetMapping(path = "/{id}/category", produces = MediaType.APPLICATION_JSON_VALUE)
+            public Iterable<NewsView> getfilterCtaegory(@PathVariable int id) {
+                logger.info("Filter the news with category "+ id);
+                     return newsRepository.findfilterCategory(id);
+            }
+
+             //filtra as noticias por categoria para a pagina inicial 
+             //usado na listanews.js
+          
 }

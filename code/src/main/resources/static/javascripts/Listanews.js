@@ -36,3 +36,38 @@ function showNew(Id_n) {
     window.location = "Newsdetail.html";
 }
 
+
+async function filterCategory() {
+    try {
+        let ID_C = document.getElementById("categorias").value;
+        let news = await $.ajax({
+            url: "/api/news/"+ID_C +"/category" ,
+            method: "get",
+            dataType: "json"
+        });
+        showNews(news);
+    } catch (err) {
+        let elemMain = document.getElementById("categorias");
+        console.log(err);
+        elemMain.innerHTML = "<h1> Página não está disponível</h1>" +
+            "<h2> Por favor tente mais tarde</h2>";
+    }
+}
+
+/*async function filterText() {
+    try {
+        let users = document.getElementById("not_texto").value;
+        let news = await $.ajax({
+            url: "/api/news/"+Not_titulo+"/text" ,
+            method: "get",
+            dataType: "json"
+        });
+        showNews(news);
+    } catch (err) {
+        let elemMain = document.getElementById("not_texto");
+        console.log(err);
+        elemMain.innerHTML = "<h1> Página não está disponível</h1>" +
+            "<h2> Por favor tente mais tarde</h2>";
+    }
+}*/
+
