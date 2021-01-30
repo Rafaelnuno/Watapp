@@ -41,8 +41,8 @@ NA.
 2.1. Título da notícia \
 2.2. Texto da notícia \
 2.3. Categoria da notícia \
-2.4. Utilizador que vai adicionar a notícia \
-4. A notícia é enviada para o histórico do moderador \
+2.4. Utilizador que vai adicionar a notícia 
+3. A notícia é enviada para o histórico do moderador 
 
 **Pós-condições:**
 Esperar pelo processo de aceitação/rejeição por parte do moderador
