@@ -55,12 +55,12 @@ Esta funcionalidade terá como objetivo visualizar os estados das notícias por 
 Estar identificado como moderador
 
 **Passo a passo:** \
-Utilizador\
+Utilizador
 1. O utilizador acede ao seu histórico carregando na aba respetiva
 2. Pode visualizar todas as notícias que efetuou
 3. Pode filtrar as notícias pelo estado que lhe foi imposto por um moderador
-4. Pode carregar em cada notícia para visualizar mais detalhes\
-Moderador\
+4. Pode carregar em cada notícia para visualizar mais detalhes \
+Moderador \
 1. O moderador acede ao histórico carregando na aba respetiva
 2. Tem acesso a todas as notícias que foram enviadas pelos utilizadores
 3. Pode carregar numa notícia para visualizar mais detalhes
