@@ -66,8 +66,9 @@ Moderador
 
 1. O moderador acede ao histórico carregando na aba respetiva
 2. Tem acesso a todas as notícias que foram enviadas pelos utilizadores
-3. Pode carregar numa notícia para visualizar mais detalhes
-4. Pode aceitar ou rejeitar a mesma
+3. Pode filtrar as notícias enviadas por utilizador
+4. Pode carregar numa notícia para visualizar mais detalhes
+5. Pode aceitar ou rejeitar a mesma
 
 **Pós-condições:**
 O utilizador aguarda o estado da notícia dependendo da ação do moderador.
