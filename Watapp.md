@@ -60,7 +60,7 @@ Utilizador
 1. O utilizador acede ao seu histórico carregando na aba respetiva
 2. Pode visualizar todas as notícias que efetuou
 3. Pode filtrar as notícias pelo estado que lhe foi imposto por um moderador
-4. Pode carregar em cada notícia para visualizar mais detalhes \
+4. Pode carregar em cada notícia para visualizar mais detalhes 
 
 Moderador 
 
