@@ -94,6 +94,23 @@ public interface NewsRepository extends CrudRepository<News, Integer> {
 //guarda uma noticia feita por qualque utilizador 
 //usado no usercontroller
 
+@Query(value = "SELECT ID_N as Id ,Use_nome as Utilizadores , Est_nome as Estado, Not_titulo as Titulo, Not_texto as Noticia, Tip_categ as Categoria, max(EstN_data) as Data " +
+"FROM Utilizador " +
+"inner join EstadoNoticia on EsTN_ID_U =ID_U " +
+"inner join Noticias on EsTN_ID_N =ID_N " +
+"inner join Estado  on EsTN_ID_E=ID_E " +
+"inner join Categoria on ID_C= Not_categ_id " +
+"where Est_nome ='Enviado' and ID_N in (SELECT distinct ID_N as ID " +
+"FROM Noticias " +
+"inner join EstadoNoticia on EsTN_ID_N =ID_N " +
+"inner join Estado on EsTN_ID_E=ID_E " +
+"Where  Est_nome='Aceite' ) and ID_C= :ID_C " +
+"group by ID_N " +
+"order by EstN_data desc limit 6 ",nativeQuery = true)
+Iterable<NewsView> findfilterCategory(@Param("ID_C") int ID_C);
+//filtra as noticias por categorias de qualquer utilizador 
+
+
 }
 
 
