@@ -7,6 +7,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
 
+import pt.iade.Watapp.models.Historic;
 import pt.iade.Watapp.models.News;
 import pt.iade.Watapp.models.views.AddNewsView;
 import pt.iade.Watapp.models.views.NewsView;
@@ -110,6 +111,15 @@ public interface NewsRepository extends CrudRepository<News, Integer> {
 Iterable<NewsView> findfilterCategory(@Param("ID_C") int ID_C);
 //filtra as noticias por categorias de qualquer utilizador 
 
+
+String saveStateNewsQuery = "INSERT INTO EstadoNoticia (Estn_id_n,EstN_data,Estn_id_e, "+
+"Estn_id_u) VALUES (:#{#historic.getNews().getId()},:#{#historic.getData()},"+
+":#{#historic.getState().getId()},:#{#historic.getUser().getId()})";
+@Modifying
+@Transactional
+@Query(value=saveStateNewsQuery, nativeQuery=true)
+int saveStateNews(@Param("historic") Historic historic);
+//muda o estado das noticias enviadas para o historico
 
 }
 

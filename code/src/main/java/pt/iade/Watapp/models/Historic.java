@@ -29,17 +29,17 @@ public class Historic {
 
     @ManyToOne
     @JoinColumn(name = "Estn_id_n")
+    @JsonIgnoreProperties({"historic"})
      private News news;
 
 
     @ManyToOne
     @JoinColumn(name = "Estn_id_e")
-    @JsonIgnoreProperties({"id"})
      private State state;
 
      @ManyToOne
      @JoinColumn(name = "Estn_id_u")
-     @JsonIgnoreProperties({"id"})
+     @JsonIgnoreProperties({"historic"})
       private User user;
      
 
@@ -59,6 +59,14 @@ public class Historic {
 
     public User getUser() {
         return user;
+    }
+ 
+    public News getNews() {
+        return news;
+    }
+
+    public int getId() {
+        return id;
     }
 
 }

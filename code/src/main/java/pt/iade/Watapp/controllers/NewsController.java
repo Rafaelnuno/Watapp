@@ -8,9 +8,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import pt.iade.Watapp.models.Historic;
 import pt.iade.Watapp.models.News;
 import pt.iade.Watapp.models.Exceptions.NotFoundException;
 import pt.iade.Watapp.models.views.NewsView;
@@ -85,5 +88,14 @@ public class NewsController {
 
              //filtra as noticias por categoria para a pagina inicial 
              //usado na listanews.js
-          
+       
+             
+        @PostMapping(path = "/{id_n}/states", produces= MediaType.APPLICATION_JSON_VALUE)
+             public int saveStateNews(@PathVariable int id_n, @RequestBody Historic historic) {
+                 logger.info("Modify the state of the new id: "+id_n); 
+                 logger.info(historic.toString());
+                    return newsRepository.saveStateNews(historic);
+             }   
+            
+             //ira mudar o estado das noticias que foram enviadas para o historico do moderador 
 }

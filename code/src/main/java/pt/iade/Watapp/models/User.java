@@ -20,13 +20,13 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_u")
-    protected int id;
+    private int id;
 
     @Column(name = "Use_nome")
-    protected String name;
+    private String name;
 
     @Column(name = "Use_email")
-    protected String email;
+    private String email;
 
     @OneToMany
     @JoinColumn(name = "Estn_id_u")
