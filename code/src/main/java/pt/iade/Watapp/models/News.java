@@ -35,7 +35,7 @@ public class News {
 
      @OneToMany
      @JoinColumn(name = "Estn_id_n")
-     @JsonIgnoreProperties({"id"})
+     @JsonIgnoreProperties({"news"})
      private List<Historic> historic;
      
      @ManyToOne

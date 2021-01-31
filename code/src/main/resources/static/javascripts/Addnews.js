@@ -1,22 +1,3 @@
-/*window.onload = async function() {
-    try {
-        let users = await $.ajax({
-            url: "/api/users",
-            method: "get",
-            dataType: "json"
-        });
-        let html="";
-        for (let user of users) {
-            html+= "<option value="+user.name+">"+user.name+
-                "</option>";
-        }
-        document.getElementById("users").innerHTML = html;
-    } catch (err) {
-        console.log(err);
-        // mensagem de erro para o utilizador      
-    }
-}*/
-
 async function addNews() {
     try {
         let news = {
@@ -43,7 +24,8 @@ async function addNews() {
             data:JSON.stringify(news),
             contentType: "application/json"
         });
-        window.location = "historicuser.html";
+        alert("A sua noticia foi enviada")
+        window.location = "index.html";
     } catch(err) {
         console.log(err);
     }
