@@ -1,14 +1,11 @@
 package pt.iade.Watapp.models;
 
-import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -21,10 +18,6 @@ public class Type{
     
     @Column(name="Tip_nome")
     private String type_name;
-
-    @OneToMany
-    @JoinColumn(name = "Use_tipo_id")
-    private List<User> users;
 
     public Type(){
     }

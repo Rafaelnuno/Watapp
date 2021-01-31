@@ -5,7 +5,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -39,9 +38,9 @@ public class UserController {
                 //(usado no historicuser.js no loadnews)
 
 
-        @PostMapping(path = "/{id_U}/news", produces= MediaType.APPLICATION_JSON_VALUE)
-            public int saveNews(@PathVariable int id_U, @RequestBody AddNewsView historic) {
-                logger.info("Saving the news of a user with id: "+id_U);
+        @PostMapping(path = "/news", produces= MediaType.APPLICATION_JSON_VALUE)
+            public int saveNews( @RequestBody AddNewsView historic) {
+                logger.info("Saving the news of a user with id: ");
                 logger.info(historic.toString());
                     News news = newsRepository.save(historic.getNews());
                         historic.setNews(news);

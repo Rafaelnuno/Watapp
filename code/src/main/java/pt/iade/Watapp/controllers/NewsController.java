@@ -90,9 +90,9 @@ public class NewsController {
              //usado na listanews.js
        
              
-        @PostMapping(path = "/{id_n}/states", produces= MediaType.APPLICATION_JSON_VALUE)
-             public int saveStateNews(@PathVariable int id_n, @RequestBody Historic historic) {
-                 logger.info("Modify the state of the new id: "+id_n); 
+        @PostMapping(path = "/states", produces= MediaType.APPLICATION_JSON_VALUE)
+             public int saveStateNews( @RequestBody Historic historic) {
+                 logger.info("Modify the state of the new id: "); 
                  logger.info(historic.toString());
                     return newsRepository.saveStateNews(historic);
              }   

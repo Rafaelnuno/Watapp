@@ -35,7 +35,7 @@ async function Accept() {
         console.log(JSON.stringify(historic))
 
         let news = await $.ajax({
-            url: "/api/news/2/states" ,
+            url: "/api/news/states" ,
             method: "post",
             dataType: "json",
             data:JSON.stringify(historic),
@@ -71,7 +71,7 @@ async function Reject() {
         console.log(JSON.stringify(historic))
         
         let news = await $.ajax({
-            url: "/api/news/3/states" ,
+            url: "/api/news/states" ,
             method: "post",
             dataType: "json",
             data:JSON.stringify(historic),

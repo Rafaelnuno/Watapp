@@ -1,6 +1,5 @@
 package pt.iade.Watapp.models;
 
-import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -9,7 +8,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
@@ -28,10 +26,6 @@ public class User {
     @Column(name = "Use_email")
     private String email;
 
-    @OneToMany
-    @JoinColumn(name = "Estn_id_u")
-    private List<Historic> historic;
-
     @ManyToOne
     @JoinColumn(name = "Use_tipo_id")
     @JsonIgnoreProperties({"id"})
@@ -39,7 +33,6 @@ public class User {
 
     public User(){
     }
-
 
 
     public User(int id) {

@@ -18,7 +18,7 @@ async function addNews() {
 
         console.log(JSON.stringify(news));
         let result = await $.ajax({
-            url: "/api/users/" + document.getElementById("utilizadores").value + "/news", 
+            url: "/api/users/news", 
             method: "post",
             dataType: "json",
             data:JSON.stringify(news),
