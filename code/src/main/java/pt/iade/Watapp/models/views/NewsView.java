@@ -5,11 +5,11 @@ import java.time.LocalDate;
 public interface NewsView {
 
     int getId();
-    String getUtilizadores();
+    String getutilizadores();
     String getTitulo();
     String getNoticia();
-    String getEstado();
-    String getCategoria();
+    String getestado();
+    String getcategoria();
     LocalDate getData();
  
 }

@@ -26,7 +26,7 @@ function showNews(news) {
         html += "<section onclick='showNew(" + ns.id + ")'>" +
             "<h3> Título:" + ns.titulo + "</h3>" +
             "<p> Categoria: " + ns.categoria + "</p>"+
-            "<p> Utilizador: " + ns.utilizadores + "</p> </section>";
+            "<p> Autor: " + ns.utilizadores + "</p> </section>";
     }
     elemMain.innerHTML = html;
 }
@@ -56,15 +56,15 @@ async function filterCategory() {
 
 /*async function filterText() {
     try {
-        let users = document.getElementById("not_texto").value;
+        let text = document.getElementById("text").value;
         let news = await $.ajax({
-            url: "/api/news/"+Not_titulo+"/text" ,
+            url: "/api/news/filter_text?text"= + text ,
             method: "get",
             dataType: "json"
         });
         showNews(news);
     } catch (err) {
-        let elemMain = document.getElementById("not_texto");
+        let elemMain = document.getElementById("text");
         console.log(err);
         elemMain.innerHTML = "<h1> Página não está disponível</h1>" +
             "<h2> Por favor tente mais tarde</h2>";

@@ -25,7 +25,7 @@ function showNews(news) {
     for (let ns of news) {
         html += "<section onclick='showNew(" + ns.id + ")'>" +
             "<h3> Título:" + ns.titulo + "</h3>" +
-            "<p> Utilizador: " + ns.utilizadores + "</p>"+
+            "<p> Autor: " + ns.utilizadores + "</p>"+
             "<p> Data da notícia enviada: " + ns.data+ "</p> </section>";
     }
     elemMain.innerHTML = html;

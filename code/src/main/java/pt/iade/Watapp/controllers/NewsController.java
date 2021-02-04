@@ -1,5 +1,6 @@
 package pt.iade.Watapp.controllers;
 
+//import java.util.ArrayList;
 import java.util.Optional;
 
 import org.slf4j.Logger;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+//import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import pt.iade.Watapp.models.Historic;
@@ -98,4 +100,15 @@ public class NewsController {
              }   
             
              //ira mudar o estado das noticias que foram enviadas para o historico do moderador 
+
+
+      /*  @GetMapping(path = "/filter_text", produces = MediaType.APPLICATION_JSON_VALUE)
+            public Iterable<News> searchTitleNews(@RequestParam(value = "title", defaultValue = "") String title) {
+             logger.info("Sending pedidos with tipo: " + title);
+                ArrayList<News> news = (ArrayList<News>) getTitle();
+                news.removeIf((n) -> !(n.getTitle().contains(title)));
+                    return news;
+         }*/
+
+        
 }

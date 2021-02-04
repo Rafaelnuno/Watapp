@@ -7,8 +7,9 @@ window.onload = async function() {
         dataType: "json"
     });
     console.log(news);
-
-    document.getElementById('userid').innerHTML = news.historic[0].user.name;
+    for (let historic of news.historic )
+        if (historic.state.id == 1)
+            document.getElementById('userid').innerHTML =historic.user.name;
     document.getElementById('titulo').innerHTML = news.title;
     document.getElementById('noticia').innerHTML = news.text;
 

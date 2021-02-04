@@ -39,7 +39,7 @@ public class Historic {
 
      @ManyToOne
      @JoinColumn(name = "Estn_id_u")
-     @JsonIgnoreProperties({"historic"})
+    @JsonIgnoreProperties({"historic"})
       private User user;
      
 
