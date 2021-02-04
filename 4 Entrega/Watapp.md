@@ -42,7 +42,8 @@ NA.
 2.2. Texto da notícia \
 2.3. Categoria da notícia \
 2.4. Utilizador que vai adicionar a notícia 
-3. A notícia é enviada para o histórico do moderador/utilizador 
+3. A notícia é enviada para o histórico do moderador/utilizador
+4. O utilizador volta para a página principal das notícias
 
 **Pós-condições:**
 Esperar pelo processo de aceitação/rejeição por parte do moderador
