@@ -110,19 +110,7 @@ SELECT ID_N as Id ,max(Use_nome) as Utilizadores , Est_nome as Estado, Not_titul
  /*filtra por categoria as noticias que foram aceites para a pagina inicial */
  
   
-SELECT ID_N as Id ,max(Use_nome) as Utilizadores , Est_nome as Estado, Not_titulo as Titulo, Not_texto as Noticia, Tip_categ as Categoria,max(EstN_data) as Data 
-    FROM Utilizador 
-    inner join EstadoNoticia on EsTN_ID_U =ID_U 
-    inner join Noticias on EsTN_ID_N =ID_N 
-    inner join Estado  on EsTN_ID_E=ID_E 
-    inner join Categoria on ID_C= Not_categ_id
-    where Est_nome='Enviado' and ID_N  in (SELECT ID_N as ID 
-    FROM Noticias 
-    inner join EstadoNoticia on EsTN_ID_N =ID_N 
-    inner join Estado on EsTN_ID_E=ID_E 
-    where Est_nome='Aceite' or Est_nome='Rejeitado') and ID_N= 41
-    group by ID_N 
-    order by Data desc;
+Select * From Noticias where ID_N = 12
 /*mostra detalhes de uma noticia em especifico*/
 
 adicionar_noticiadicionar_noticia
@@ -144,5 +132,6 @@ VALUES ( Not_foto, Not_titulo,  Not_texto, Not_Categ_ID);
 END //
         
  DELIMITER ;  
+
 
 
