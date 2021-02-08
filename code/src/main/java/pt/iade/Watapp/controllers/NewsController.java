@@ -64,7 +64,7 @@ public class NewsController {
             public News getNews(@PathVariable int id) {
                 logger.info("Sending the news with id "+id);
                     Optional<News> _news = newsRepository.findById(id);
-                    if (_news.isEmpty()) 
+                    if (!_news.isPresent()) 
                         throw new NotFoundException(""+id,"News","id");
                     else 
                     return _news.get();
